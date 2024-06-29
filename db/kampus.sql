@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 29, 2024 at 06:19 AM
+-- Generation Time: Jun 29, 2024 at 01:01 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -34,16 +34,8 @@ CREATE TABLE `mahasiswa` (
   `alamat` varchar(200) NOT NULL,
   `jenis_kelamin` enum('Pria','Wanita') NOT NULL,
   `email` varchar(100) NOT NULL,
-  `telepon` varchar(15) NOT NULL
+  `telp` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `mahasiswa`
---
-
-INSERT INTO `mahasiswa` (`id`, `nim`, `nama`, `alamat`, `jenis_kelamin`, `email`, `telepon`) VALUES
-(9, '2210010059', 'Nasrulia Khairunisa Istiqomah', 'Jl. Sungai Andai', 'Wanita', 'nasrulia@gmail.com', '087689765456'),
-(10, '2210010876', 'Jay ', 'Jl. Handil Bakti', 'Pria', 'jay@gmail.com', '087645345678');
 
 -- --------------------------------------------------------
 
@@ -63,8 +55,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `level`, `password`) VALUES
-(1, 'admin', 'admin', '$2y$10$3kcccmdDewl1aY6t1lAtI.3Jav7JtCRG6jFBHz1HAKZzJpnbbpwaq'),
-(16, 'user', 'user', '$2y$10$myVkGxyKaW/ltB/sc1mE2utaoF3SFaH0CAcksmGOUaaJcLBEZwNaO');
+(1, 'admin', 'admin', '$2y$10$aqZYeexbO9HRR8JZvVIRyu9A2ybCW.v4wa7DS5NaXtnPE7B7QVjUC'),
+(2, 'user', 'user', '$2y$10$nxlIsir9abYh3.5TANxpBeQSdW54UBaRXn1pFzNfKY3Hy/JDC56KS');
 
 --
 -- Indexes for dumped tables
@@ -90,13 +82,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
